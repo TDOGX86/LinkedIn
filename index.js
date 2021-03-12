@@ -4,7 +4,8 @@ const server = express();
 let students = require("./db"); // bring in db info
 const cors = require("cors"); // bring in CORS
 
-const PORT = "8080";
+//process.env.PORT
+const PORT = process.env.PORT || "8080";
 //USES
 server.use(cors());
 server.use(express.json()); //reads from form
